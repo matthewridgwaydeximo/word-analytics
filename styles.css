@@ -85,11 +85,15 @@ body {
     border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.stat__numnber {
+.stat__number {
     color: #4d5457;
     font-weight: 600px;
     font-size: 35px;
     margin-bottom: 10px;
+}
+
+.stat__number--limit {
+    color: red;
 }
 
 .second-heading {
