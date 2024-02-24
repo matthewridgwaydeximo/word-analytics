@@ -1,3 +1,13 @@
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+
 export default function App() {
-    return <div>Hello World</div>;
+    return (
+        <>
+            <Header />
+            <Main />
+            <Footer />
+        </>
+    );
 }
