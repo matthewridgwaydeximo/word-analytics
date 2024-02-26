@@ -8,20 +8,17 @@ const FACEBOOK_MAX_LENGTH = 2200;
 export default function Main() {
     const [text, setText] = useState("");
 
-    const numberOfWords = text.split(" ").filter((word) => word !== "").length;
-    const numberOfCharacters = text.length;
-    const instagramCharactersLeft = INSTAGRAM_MAX_LENGTH - numberOfCharacters;
-    const facebookCharactersLeft = FACEBOOK_MAX_LENGTH - numberOfCharacters;
+    const stats = {
+        numberOfWords: text.split(" ").filter((word) => word !== "").length,
+        numberOfCharacters: text.length,
+        instagramCharactersLeft: INSTAGRAM_MAX_LENGTH - text.length,
+        facebookCharactersLeft: FACEBOOK_MAX_LENGTH - text.length,
+    };
 
     return (
         <main className="container">
             <TextArea text={text} setText={setText} />
-            <Stats
-                numberOfWords={numberOfWords}
-                numberOfCharacters={numberOfCharacters}
-                instagramCharactersLeft={instagramCharactersLeft}
-                facebookCharactersLeft={facebookCharactersLeft}
-            />
+            <Stats stats={stats} />
         </main>
     );
 }
