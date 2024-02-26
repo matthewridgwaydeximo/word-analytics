@@ -2,8 +2,7 @@ import { useState } from "react";
 import Warning from "./Warning.jsx";
 import { warnings } from "../helper/Validations.js";
 
-export default function TextArea() {
-    const [text, setText] = useState("");
+export default function TextArea({ text, setText }) {
     const [warningText, setWarningText] = useState("");
 
     const handleTextChange = (e) => {
